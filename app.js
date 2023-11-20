@@ -11,7 +11,7 @@ const { validateMovie, validatePartialMovie } = require('./schemas/moviesSchema'
 
 // Definición de variables globales
 const app = express() // Creación de la app con express.js
-const PORT = 3000
+const PORT = process.env.PORT ?? 3000
 
 app.disable('x-powered-by')
 
