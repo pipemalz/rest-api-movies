@@ -30,10 +30,6 @@ app.use(cors({
   }
 })) // Middleware para cabeceras CORS, Por defecto asigna '*' a la cabecera Access-Control-Allow-Origin, por lo tanto si queremos limitarlo se mandamos un parametro con los origin permitidos
 
-app.get('/', (request, response) => { // GET: Obtener un elemento / recurso del servidor
-  response.status(200).send('<h1>Bienvenido</h1>')
-})
-
 // Todos los recursos para MOVIES se identifican con /movies a estas rutas se le denomina endpoint.
 app.get('/movies', (request, response) => {
   // recuperamos el el genero enviado por query strings
